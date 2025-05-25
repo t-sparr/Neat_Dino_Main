@@ -1,0 +1,33 @@
+# Godot-specific
+.import/
+.export/
+*.import
+*.godot/tmp/
+*.godot/backup/
+*.cfg
+*.mono/
+*.godot-project
+*.translation
+
+# Godot build export templates (optional)
+export_presets.cfg
+
+# Python-specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env/
+venv/
+.env
+*.egg-info/
+
+# IDE/editor config (optional)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

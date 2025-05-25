@@ -1,0 +1,26 @@
+extends Node2D
+
+var time_accum = 0
+@export var background_scroll_speed := 1.0
+@export var scroll_speed := 400
+@onready var score_label = $UI/HFlowContainer/Score_Label
+
+func _ready() -> void:
+	Global.scroll_speed = scroll_speed
+	update_background_speed()
+	Global.score = 0
+
+func _process(delta: float) -> void:
+	time_accum += delta
+	if time_accum > .05: 
+		Global.score += 1
+		update_ui()
+		time_accum = 0
+		
+func update_background_speed():
+	$Background_Environment/Background.material.set_shader_parameter('scroll_speed', background_scroll_speed)		
+
+
+func update_ui():
+	score_label.text = "Score:%d" % Global.score
+	
