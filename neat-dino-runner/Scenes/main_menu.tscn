@@ -55,6 +55,7 @@ z_index = -5
 texture_filter = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_yhxw7")
+layout_mode = 0
 offset_left = -83.0
 offset_top = -15.0
 offset_right = 1029.0
